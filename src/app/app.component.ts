@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Card} from './card'
+import { Card } from './card';
+import {ApiService} from './api.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,20 @@ import { Card} from './card'
 })
 export class AppComponent {
   title = 'test1';
+  getall:Card;
+  constructor (
+    private apiService:ApiService,
+  ){}
+  ngOnInit():void {
+    //this.getAll();
+    this.getAllTra();
+  }
+  getAll(){
+    this.apiService.getAllCaphe().subscribe(repone => this.getall=repone)
+  }
+  getAllTra(){
+    this.apiService.getAllTra().subscribe(repone => this.getall=repone)
+  }
+  
 }
 

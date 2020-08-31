@@ -1,1 +1,23 @@
 <app-menu></app-menu>
+
+
+  
+  
+  
+<li class="nav-item">
+    <a class="nav-link" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>
+    <div *ngFor="let item of getall ">   
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" 
+          src="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png"
+           alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.ten}}</h5>
+            <p class="card-text">{{item.gia}} <span>VND</span></p>
+            <a 
+              href="#dathang" class="btn btn-5">Mua Ngay   
+            </a>
+      </div>
+  </div>
+  </div>
+  </li>

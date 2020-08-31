@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Card } from  '../card';
 
 @Component({
@@ -8,6 +8,7 @@ import { Card } from  '../card';
 })
 export class CardComponent implements OnInit {
 
+  @Input() iscard=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +19,9 @@ export class CardComponent implements OnInit {
     new Card('Cà Phê Sữa',30000,'https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png'),
     new Card('Bạc Xỉu',28000,'https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/thumbs/270_crop_Bac_Xiu_Da.png'),
   ];
-  
+
+    
+
+
 }
 
