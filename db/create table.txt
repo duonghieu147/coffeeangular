@@ -1,0 +1,33 @@
+CREATE TABLE caphe (
+	id serial PRIMARY KEY,
+	ten VARCHAR ( 50 ) UNIQUE NOT NULL,
+	gia INTEGER NOT NULL,
+	mota VARCHAR ( 255 ) NOT NULL,
+	url  VARCHAR ( 255 )
+);
+
+CREATE TABLE tra(
+	id serial PRIMARY KEY,
+	ten VARCHAR ( 50 ) UNIQUE NOT NULL,
+	gia INTEGER NOT NULL,
+	mota VARCHAR ( 255 ) NOT NULL,
+	url  VARCHAR ( 255 )
+);
+
+
+CREATE TABLE merchandise(
+	id serial PRIMARY KEY,
+	ten VARCHAR ( 50 ) UNIQUE NOT NULL,
+	gia INTEGER  NOT NULL,
+	mota VARCHAR ( 255 ) NOT NULL,
+	url  VARCHAR ( 255 )
+);
+
+CREATE TABLE accounts (
+	user_id serial PRIMARY KEY,
+	username VARCHAR ( 50 ) UNIQUE NOT NULL,
+	password VARCHAR ( 50 ) NOT NULL,
+	email VARCHAR ( 255 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+        last_login TIMESTAMP 
+);

@@ -1,0 +1,68 @@
+SELECT * FROM caphe;
+SELECT * FROM tra;
+SELECT * FROM banhmi;
+
+---insert Cà Phê 
+INSERT INTO caphe(ten, gia)
+VALUES 
+('Cà Phê Sữa',25000 ),
+('Cà Phê Đên',20000 ),
+('Bạc Xỉu Đá',25000)
+RETURNING *;;
+
+---insert Trà
+INSERT INTO tra(ten, gia)
+VALUES 
+('Trà Sen Vàng',25000 ),
+('Trà Thạch Đào',20000 ),
+('Trà Thanh Đào',25000),
+('Trà Thạch Vãi',30000)
+RETURNING *;
+
+---insert Bánh Mình
+INSERT INTO banhmi(ten, gia)
+VALUES 
+('Thịt Nướng',17000 ),
+('Xíu Mại',15000 ),
+('Chả Lụa',15000)
+RETURNING *;
+
+
+
+---ten ,gia,content,url_img
+
+---insert ca phe
+INSERT INTO caphe(ten, gia,mota,url)
+VALUES 
+('Cà Phê Sữa Trứng Muối',55000,'1 phiên bản cà phê đặc biệt, được kết hợp bởi 1 shot espresso đượm vị, kết hợp với lớp sữa tươi và foam trứng muối mặn nhẹ, beo béo - cho cảm giác "phê" đúng nghĩa, tỉnh táo đầy mới lạ.','https://product.hstatic.net/1000075078/product/cf-sua-trung-muoi_1x1_60cc3fbc3c0147ca889fdf0312ba5c14_master.jpg'),
+('CÀ PHÊ SỮA',32000,'Cà phê phin kết hợp cũng sữa đặc là một sáng tạo đầy tự hào của người Việt, được xem món uống thương hiệu của Việt Nam.','https://product.hstatic.net/1000075078/product/cfsd_615a3cb2b1e342d2b1986bfeb6572070_master.jpg'),
+('CÀ PHÊ ĐEN',32000,'Một tách cà phê đen thơm ngào ngạt, phảng phất mùi cacao là món quà tự thưởng tuyệt vời nhất cho những ai mê đắm tinh chất nguyên bản nhất của cà phê. Một tách cà phê trầm lắng, thi vị giữa dòng đời vồn vã.','https://product.hstatic.net/1000075078/product/cf_da_copy_a33d6e77f8da405bba9da541744dcea9_master.jpg'),
+('BẠC SỈU',32000,'Theo chân những người gốc Hoa đến định cư tại Sài Gòn, Bạc sỉu là cách gọi tắt của "Bạc tẩy sỉu phé" trong tiếng Quảng Đông, chính là: Ly sữa trắng kèm một chút cà phê.','https://product.hstatic.net/1000075078/product/bac_siu_099c749a7d6044bc9f7f0eac7f57808f_master.jpg'),
+('CAPPUCCINO',45000,'Cappuccino được gọi vui là thức uống "một-phần-ba" - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam','https://product.hstatic.net/1000075078/product/cappuccino_af58b143de7e4faeb9a3ce59b313c946_master.jpg'),
+('ESPRESSO',35000,'Một cốc Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc. Để đạt được sự kết hợp này, chúng tôi xay tươi hạt cà phê cho mỗi lần pha.','https://product.hstatic.net/1000075078/product/espressonong_f60fc6f25baa404c8a8bfc40c396f27e_master.jpg')
+RETURNING *;
+
+--Tra
+INSERT INTO tra(ten, gia,mota,url)
+VALUES 
+('TRÀ OOLONG VẢI',45000,'TRÀ OOLONG VẢI','https://product.hstatic.net/1000075078/product/tra_vai_046084306a484f41bd8c37efaab8f538_large.jpg'),
+('TRÀ OOLONG HẠT SEN',45000,'TRÀ OOLONG HẠT SEN','https://product.hstatic.net/1000075078/product/tra_sen_bd7ab23f9be048429bb13682f6515ec3_master.jpg'),
+('TRÀ ĐÀO CAM SẢ',45000,'TRÀ ĐÀO CAM SẢ','https://product.hstatic.net/1000075078/product/tra_dao_5f3925d9bfca4d0abc17f95b05fff5f7_large.jpg'),
+('TRÀ OOLONG PHÚC BỒN TỬ',50000,'TRÀ OOLONG PHÚC BỒN TỬ','https://product.hstatic.net/1000075078/product/tra_pbt_b1d7b2aac4474bad9e16906964170a17_large.jpg'),
+('TRÀ MATCHA MACCHIATO',45000,'TRÀ MATCHA MACCHIATO','https://product.hstatic.net/1000075078/product/_2matcha_macchiato_copy_a4142e7ff6fe41058bdd415ea67ecb2d_large.jpg'),
+('PHÚC BỒN TỬ CAM ĐÁ XAY',55000,'PHÚC BỒN TỬ CAM ĐÁ XAY','https://product.hstatic.net/1000075078/product/cam_pbt_da_xay_27dc80ef2efb4828885c2be429aa42fa_large.jpg')
+RETURNING *;
+
+
+
+---MERCHANDISE
+INSERT INTO merchandise(ten,gia,mota,url)
+VALUES
+('Bình Giữ Nhiệt Inox Con Thuyền',300000,'Bình Giữ Nhiệt Inox Con Thuyền','https://product.hstatic.net/1000075078/product/merchandise_hinh_len_webtumbler_con_thuyen_84d887ab98864640b520a31b986a252a_large.jpg'),
+('Bình Giữ Nhiệt Inox Quả Dứa',300000,'Bình Giữ Nhiệt Inox Quả Dứa','https://product.hstatic.net/1000075078/product/merchandise_hinh_len_webtumbler_qua_dua_f5aee5d72b8249db9ef043dc6a6d651b_large.jpg'),
+('Bình Giữ Nhiệt Inox The Coffee House (Đen)',300000,'Bình Giữ Nhiệt Inox The Coffee House (Đen)','https://product.hstatic.net/1000075078/product/merchandise_hinh_len_webbinh_tumbler_den_b57fb8bfe9c446a092b076cb3f42d735_large.jpg'),
+('Cốc Sứ The Coffee House Hà Nội',120000,'Cốc Sứ The Coffee House Hà Nội','https://product.hstatic.net/1000075078/product/merchandise_hinh_len_webly_su_hn_8324ce692c154ac68c6fc388394b7e13_large.jpg'),
+('Cốc Sứ The Coffee House Sọc Ngang',100000,'Cốc Sứ The Coffee House Sọc Ngang','https://product.hstatic.net/1000075078/product/merchandise_hinh_len_webly_su_soc_ngang_6ea7e30e86fd49cdac08e725ee35b6dd_large.jpg')
+RETURNING *;
+
+
