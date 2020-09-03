@@ -24,4 +24,7 @@ export class ApiService {
   getAllTra():Observable<Card>{
     return this.httpClient.get<Card>(this.baseurl+'tra')
   }
+  getAllMerchandise():Observable<Card>{
+    return this.httpClient.get<Card>(this.baseurl+'merchandise')
+  }
 }

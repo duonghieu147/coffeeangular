@@ -1,10 +1,11 @@
 <ul class="nav "  >
     <li class="nav-item">
-      <a class="nav-link active" href="#"><span>HOME</span></a>
-      
+      <a class="nav-link active" routerLink="/login" routerLinkActive="active"><span>HOME</span></a>
+      <app-login></app-login>
     </li>
+    
     <li class="nav-item">
-      <a class="nav-link" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>
+       <!-- <a class="nav-link" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>  -->
       <app-card></app-card>
     </li>
     <li class="nav-item">
@@ -16,3 +17,13 @@
       <app-contact></app-contact>
     </li>
   </ul>
+
+
+  <nav>
+    <a  routerLink="/login" routerLinkActive="active"><span>HOME</span></a> |
+    <a  routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a> |
+    <a  href="#"><span>NEW</span></a> |
+    <a  href="#"><span>CONTACT</span></a> |
+  </nav>
+
+  

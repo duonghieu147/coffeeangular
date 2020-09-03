@@ -1,4 +1,4 @@
-<div *ngFor="let item of card ">
+<!-- <div *ngFor="let item of card ">
   <div *ngIf="!iscard" >
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" 
@@ -14,26 +14,26 @@
       </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
  -->
+
+
+
+
+
+<li class="row">
+  <a class="row" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>
+  <div *ngFor="let item of getall ">         
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" 
+        src={{item.url}}
+         alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.ten}}</h5>
+          <p class="card-text"  style= "color:blue">{{item.gia}} <span>VND</span></p>
+          <a 
+            href="#dathang" class="btn btn-5">Mua Ngay   
+          </a>
+          </div>
+      </div>
+</div>
+</li>

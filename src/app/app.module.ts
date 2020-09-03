@@ -10,6 +10,10 @@ import { ContactComponent } from './contact/contact.component';
 import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CardDetailComponent } from './card/card-detail/card-detail.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -19,12 +23,16 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     NewsComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CardDetailComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

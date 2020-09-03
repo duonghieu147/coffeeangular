@@ -3,21 +3,28 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+
 import { Card } from './card';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path:'news',component:NewsComponent
+    path:'news',component:NewsComponent, pathMatch: 'full'
   },
   {
-    path:'home',component:HomeComponent
+    path:'home',component:HomeComponent, 
   },
-  // {
-  //   path:'contact',component:ContactComponent
-  // },
   {
-    path:'ca-phe',component:Card
+    path:'contact',component:ContactComponent
+  },
+  {
+    path:'ca-phe',component:Card, 
+  },
+  {
+    path:'login',component:LoginComponent,
   }
+  
+
 ];
 
 @NgModule({
