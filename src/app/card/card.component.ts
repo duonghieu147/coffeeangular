@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input ,AfterContentInit} from '@angular/core';
 
 import { Card } from '../card';
 import {ApiService} from '../api.service';
@@ -10,18 +10,29 @@ import {ApiService} from '../api.service';
 })
 export class CardComponent implements OnInit {
 
- 
+  item_card=['caphe','tra','merchandise'];
+  item_cards=this.item_card[2];
+
   getall:Card;
   constructor (
     private apiService:ApiService,
   ){}
 
   ngOnInit():void {
-    
-
-    this.getAllCaphe();
+    //this.getAllCaphe();
     //this.getAllTra();
     this.getAllMerchandise();
+  }
+  ngAfterViewInit():void {
+    if(this.item_cards=='caphe'){
+      this.getAllCaphe();
+    }
+    else if(this.item_cards=='tra'){
+      this.getAllTra();
+    }
+    else if(this.item_cards='merchandise'){
+      this.getAllMerchandise();
+    }
   }
   
   getAllCaphe(){
@@ -33,15 +44,6 @@ export class CardComponent implements OnInit {
   getAllMerchandise(){
     this.apiService.getAllMerchandise().subscribe(repone => this.getall=repone)
   }
-  // card =[
-  //   new Card('Cà Phê Đen',25000,'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png'),
-  //   new Card('Cà Phê Sữa',30000,'https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png'),
-  //   new Card('Bạc Xỉu',28000,'https://www.highlandscoffee.com.vn/vnt_upload/product/04_2020/thumbs/270_crop_Bac_Xiu_Da.png'),
-  // ];
-
-    
-
-
 
 }
 

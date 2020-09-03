@@ -18,7 +18,7 @@ const routes: Routes = [
     path:'contact',component:ContactComponent
   },
   {
-    path:'ca-phe',component:Card, 
+    path:'caphe',component:Card, 
   },
   {
     path:'login',component:LoginComponent,
