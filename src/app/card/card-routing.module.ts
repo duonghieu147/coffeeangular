@@ -28,4 +28,4 @@ const cardRoutes: Router = [
         RouterModule
     ]
 })
-export class CardRoutingModule{ }
+//export class CardRoutingModule{ }

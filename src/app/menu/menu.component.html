@@ -1,17 +1,16 @@
-<h1>Simple Pure CSS Drop Down Menu</h1>
+<h1>-------------------------------------------------------------------</h1>
 <nav id="primary_nav_wrap">
 <ul>
-  <li class="current-menu-item"><a href="#">Home</a></li>
+  <li class="current-menu-item"><a  routerLink="/login" routerLinkActive="active">Home</a></li>
   
   <li><a href="#">Menu</a>
     <ul>
-      <!-- <li><a href="#">Cà Phê</a></li> -->
-      <li><a class="nav-link" routerLink="/caphe" routerLinkActive="active"  ><span>Cà Phê</span></a></li>
+      <li><a routerLink="/caphe" routerLinkActive="active"> <button (click)="myClickCaphe($event)"><span>Cà Phê</span></button> </a></li>
       <li><a href="#">Trà Trái Cây</a></li>
       <li><a href="#">Merchandise</a></li>
      </ul>   
   </li>
-  <li><a href="#">Bản Tin</a>
+  <li><a routerLink="/news" routerLinkActive="active"  ><span>Bản Tin</span></a>
     <ul>
       <li><a href="#">Khiếu Mãi</a></li>
       <li><a href="#">Sản Phẩm mới</a></li>
@@ -20,8 +19,9 @@
   </li>
   <li><a href="#">Tuyển Dụng</a>
   </li>
-  <li><a href="#">Contact Us</a></li>
+  <li><a routerLink="/contact" routerLinkActive="active"  ><span>Contact US</span></a></li>
 </ul>
+
 </nav>
 
 
@@ -29,15 +29,20 @@
 
 
 
+
+
+
+
+<!-- 
 <ul class="nav "  >
     <li class="nav-item">
       <a class="nav-link active" routerLink="/login" routerLinkActive="active"><span>HOME</span></a>
-      <app-login></app-login>
+      <router-outlet></router-outlet>
     </li>
     
     <li class="nav-item">
-       <!-- <a class="nav-link" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>  -->
-      <app-card></app-card>
+       <a class="nav-link" routerLink="/ca-phe" routerLinkActive="active"  ><span>MENU</span></a>  -->
+      <!-- <app-card></app-card>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#"><span>NEW</span></a>
@@ -49,30 +54,4 @@
     </li>
   </ul>
 
-
-
-  <h1>Simple Pure CSS Drop Down Menu</h1>
-  <nav id="primary_nav_wrap">
-  <ul>
-    <li class="current-menu-item"><a href="#">Home</a></li>
-    <li><a href="#">Menu</a>
-      <ul>
-        <li><a href="#">Cà Phê</a></li>
-        <li><a href="#">Trà Trái Cây</a></li>
-        <li><a href="#">Merchandise</a></li>
-       </ul>   
-    </li>
-    <li><a href="#">Bản Tin</a>
-      <ul>
-        <li><a href="#">Khiếu Mãi</a></li>
-        <li><a href="#">Sản Phẩm mới</a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </li>
-    <li><a href="#">Tuyển Dụng</a>
-    </li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-  </nav>
-
-  
+   -->

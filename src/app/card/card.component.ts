@@ -11,7 +11,7 @@ import {ApiService} from '../api.service';
 export class CardComponent implements OnInit {
 
   item_card=['caphe','tra','merchandise'];
-  item_cards=this.item_card[2];
+  item_cards=this.item_card[1];
 
   getall:Card;
   constructor (
@@ -19,9 +19,9 @@ export class CardComponent implements OnInit {
   ){}
 
   ngOnInit():void {
-    //this.getAllCaphe();
+    this.getAllCaphe();
     //this.getAllTra();
-    this.getAllMerchandise();
+    //this.getAllMerchandise();
   }
   ngAfterViewInit():void {
     if(this.item_cards=='caphe'){
@@ -44,6 +44,8 @@ export class CardComponent implements OnInit {
   getAllMerchandise(){
     this.apiService.getAllMerchandise().subscribe(repone => this.getall=repone)
   }
+
+  
 
 }
 

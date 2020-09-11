@@ -4,7 +4,7 @@ import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 
-import { Card } from './card';
+import { CardComponent } from './card/card.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
     path:'contact',component:ContactComponent
   },
   {
-    path:'caphe',component:Card, 
+    path:'caphe',component:CardComponent, 
   },
   {
     path:'login',component:LoginComponent,
